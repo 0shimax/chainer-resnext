@@ -49,7 +49,7 @@ class LaminationBlock(chainer.Chain):
         self.forward = links
 
     def __call__(self, x, train):
-        for name, _ in sorted(self.forward):
+        for name, _ in self.forward:
             f = getattr(self, name)
             x = f(x)
         return x
