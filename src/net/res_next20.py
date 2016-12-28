@@ -64,7 +64,7 @@ class ResNext20(chainer.Chain):
             res3=LaminationBlock(4, 256, 4, 512, stride=2),
             # res4=LaminationBlock(6, 512, 256, 1024),
             # res5=LaminationBlock(3, 1024, 512, 2048),
-            conv2=L.Convolution2D(512*21, 4096, 1, pad=0),  # *21
+            conv2=L.Convolution2D(512*21, 4096, 1, pad=0),
             conv3=L.Convolution2D(4096, n_class, 1, pad=0)
         )
         self.train = True
